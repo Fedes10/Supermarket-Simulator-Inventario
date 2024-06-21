@@ -29,5 +29,5 @@ Esta lista de la compra completa te ayudará a encontrar todos los productos que
 
 # Fotos
 
-<img src="https://github.com/Fedes10/Supermarket-Simulator-Inventario/blob/main/Foto-Web-Ejemplo.png" width="200" height="150">
+<img src="https://github.com/Fedes10/Supermarket-Simulator-Inventario/blob/main/Foto-Web-Ejemplo.png" width="500" height="400">
 
