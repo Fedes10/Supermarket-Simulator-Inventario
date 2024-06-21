@@ -1,6 +1,6 @@
 # ¡Presentamos la lista de la compra definitiva para Supermarket Simulator!
 
-# ¿Cansado de perder tiempo buscando productos en Supermarket Simulator? ¡Olvídate de eso!
+ ¿Cansado de perder tiempo buscando productos en Supermarket Simulator? ¡Olvídate de eso!
 
 Esta lista de la compra completa te ayudará a encontrar todos los productos que necesitas en un abrir y cerrar de ojos.
 ![Alt Text](https://github.com/Fedes10/Mi-propia-IA/blob/Inicio/img/logoia.png)
