@@ -3,6 +3,7 @@
  ¿Cansado de perder tiempo buscando productos en Supermarket Simulator? ¡Olvídate de eso!
 
 Esta lista de la compra completa te ayudará a encontrar todos los productos que necesitas en un abrir y cerrar de ojos.
+
 ![Alt Text](https://github.com/Fedes10/Supermarket-Simulator-Inventario/blob/main/Foto-Web-Ejemplo.png)
 # ¿Qué incluye?
 
