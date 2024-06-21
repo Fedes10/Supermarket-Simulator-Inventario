@@ -4,7 +4,7 @@
 
 Esta lista de la compra completa te ayudará a encontrar todos los productos que necesitas en un abrir y cerrar de ojos.
 
-<img src="https://github.com/Fedes10/Supermarket-Simulator-Inventario/blob/main/Foto-Web-Ejemplo.png" width="500" height="400">
+<img src="https://github.com/Fedes10/Mi-propia-IA/blob/Inicio/Foto-Web-Ejemplo.png" width="500" height="400">
 
 # ¿Qué incluye?
 
@@ -29,5 +29,5 @@ Esta lista de la compra completa te ayudará a encontrar todos los productos que
 
 # Fotos
 
-<img src="https://github.com/Fedes10/Supermarket-Simulator-Inventario/blob/main/Foto-Web-Ejemplo.png" width="500" height="400">
+<img src="https://github.com/Fedes10/Mi-propia-IA/blob/Inicio/Foto-Web-Ejemplo.png" width="500" height="400">
 
