@@ -1,4 +1,4 @@
-# ¡Presentamos la lista de la compra definitiva para Supermarket Simulator!
+# ¡Lista de la compra para Supermarket Simulator!
 
  ¿Cansado de perder tiempo buscando productos en Supermarket Simulator? ¡Olvídate de eso!
 
