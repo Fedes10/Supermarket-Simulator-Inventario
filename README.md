@@ -25,8 +25,6 @@ Esta lista de la compra completa te ayudará a encontrar todos los productos que
 
 # ¡Descarga la lista ahora y empieza a comprar fácilmente!
 
-# Para usar esta lista:
-
     Descarga los archivos en una carpeta
     Abre el archivo .html en tu navegador web
 
