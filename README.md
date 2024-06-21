@@ -27,4 +27,7 @@ Esta lista de la compra completa te ayudará a encontrar todos los productos que
     Descarga los archivos en una carpeta
     Abre el archivo .html en tu navegador web
 
-![Alt Text](https://github.com/Fedes10/Mi-propia-IA/blob/Inicio/img/logoia.png)
+# Fotos
+
+<img src="https://github.com/Fedes10/Supermarket-Simulator-Inventario/blob/main/Foto-Web-Ejemplo.png" width="200" height="150">
+
