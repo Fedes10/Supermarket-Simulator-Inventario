@@ -4,7 +4,8 @@
 
 Esta lista de la compra completa te ayudará a encontrar todos los productos que necesitas en un abrir y cerrar de ojos.
 
-![Alt Text](https://github.com/Fedes10/Supermarket-Simulator-Inventario/blob/main/Foto-Web-Ejemplo.png)
+<img src="https://github.com/Fedes10/Supermarket-Simulator-Inventario/blob/main/Foto-Web-Ejemplo.png" width="200" height="150">
+
 # ¿Qué incluye?
 
     Una lista exhaustiva de todos los productos disponibles en Supermarket Simulator.
