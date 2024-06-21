@@ -4,7 +4,7 @@
 
 Esta lista de la compra completa te ayudará a encontrar todos los productos que necesitas en un abrir y cerrar de ojos.
 
-<img src="https://github.com/Fedes10/Mi-propia-IA/blob/Inicio/_65d2ab48-27da-4fff-bdb0-c85b8e739104.jpg" width="500" height="400">
+<img src="https://github.com/Fedes10/Mi-propia-IA/blob/Inicio/_65d2ab48-27da-4fff-bdb0-c85b8e739104.jpg" width="300" height="300">
 
 # ¿Qué incluye?
 
