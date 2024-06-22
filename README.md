@@ -1,6 +1,6 @@
 # ¡Lista de la compra para Supermarket Simulator!
 
- ¿Cansado de perder tiempo buscando productos en Supermarket Simulator? ¡Olvídate de eso!
+¿Cansado de perder tiempo buscando productos en Supermarket Simulator? ¡Olvídate de eso!
 
 Esta lista de la compra completa te ayudará a encontrar todos los productos que necesitas en un abrir y cerrar de ojos.
 
