@@ -78,21 +78,27 @@ table {
 }
 
 th, td {
-  padding: 10px;
-  text-align: left;
-  border-bottom: 1px solid #ffffff;
+  padding: 5px;
+  text-align: center;
+  border-bottom: 1px solid #3c7fa7;
+  border: 2px solid #3c7fa7;
 }
 
 th {
-  background-color: #3c7fa7;
+  background-color: #235069;
   color: white;
-  border: 2px solid #ffffff; /* Añadido borde a la cabecera */
+  border: 2px solid #3c7fa7;
+  height: 50px;
 }
 
 td img {
-  width: 200px;
+  width: 200px; /* Ajusta el tamaño de la imagen */
   height: 100px;
   border-radius: 10px;
+}
+
+th.foto-columna, td.foto-columna {
+  width: 200px; /* Ajusta el ancho de la columna de fotos */
 }
 
 .fila-producto {
@@ -134,11 +140,12 @@ td img {
   margin-top: 20px;
   cursor: pointer;
   border-radius: 5px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 #boton-limpiar:hover {
   background-color: #6d0b0b;
+  transform: scale(1.1);
 }
 
 label {
@@ -177,47 +184,56 @@ h3 {
   margin-top: 30px;
 }
 
-@keyframes slideInLeft {
+@keyframes scaleIn {
   from {
-    opacity: 0;
-    transform: translateX(-100%);
+    transform: scale(1);
   }
   to {
-    opacity: 1;
-    transform: translateX(0);
+    transform: scale(1.1);
   }
 }
 
-@keyframes slideOutRight {
-  from {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateX(100%);
-  }
+#agregar:hover {
+  background-color: rgba(112, 233, 42, 0.459);
+  animation: none;
+  transition: background-color 0.3s, transform 0.3s;
+  transform: scale(1.1);
 }
 
-.entrada-slide {
-  animation: slideInLeft 3s ease forwards;
+#quitar:hover {
+  background-color: rgba(236, 8, 8, 0.651);
+  animation: none;
+  transition: background-color 0.3s, transform 0.3s;
+  transform: scale(1.1);
 }
 
-.salida-slide {
-  animation: slideOutRight 3s ease forwards;
+#agregar:active {
+  background-color: rgba(94, 255, 0, 0.288);
+}
+
+#quitar:active {
+  background-color: rgba(255, 0, 0, 0.342);
+}
+
+#agregar {
+  background-color: rgba(68, 145, 23, 0.562);
+}
+
+#quitar {
+  background-color: rgba(160, 23, 23, 0.795);
 }
 
 #caja-busqueda {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
-  border: 2px solid #3c7fa7;
+  border: 2px solid #838383;
   border-radius: 5px;
   background-color: #2a2a2a;
   color: white;  
-  box-sizing: border-box; /* Añadido */
+  box-sizing: border-box;
+  margin-bottom: 30px;
 }
-
 
 </style>
 </head>
@@ -227,11 +243,11 @@ h3 {
     <h2><i class="fa-solid fa-boxes-stacked" style="color: rgb(255, 208, 0);"></i> Inventario Almacén <i class="fa-solid fa-boxes-stacked" style="color: rgb(255, 208, 0);"></i></h2>
     <div class="contenedor-tabla">
       <input type="text" id="caja-busqueda" placeholder="Buscar...">
-                <!----------------------------------------------- PRODUCTOS  LISTA ----------------------------------------------->
+                <!----------------------------------------------- PRODUCTOS LISTA ----------------------------------------------->
       <table>
         <thead>
           <tr>
-            <th>Foto</th>
+            <th class="foto-columna">Foto</th>
             <th>Producto</th>
             <th>Añadir</th>
             <th>Quitar</th>
@@ -239,18 +255,19 @@ h3 {
         </thead>
         <tbody>
           <tr class="fila-producto">
-            <td><img src="https://via.placeholder.com/100" alt="Manzanas"></td>
+            <td class="foto-columna"><img src="https://via.placeholder.com/50" alt="Manzanas"></td>
             <td>Manzanas</td>
-            <td>
-              <button style="background-color: rgba(177, 164, 51, 0.521);" id="agregar" onclick="agregarALista('Manzanas')"> <i class="fa-solid fa-circle-plus"></i></button>
+            <td style="padding: 0; text-align: center;">
+              <button style="font-size: 24px; width: 60%; height: 80px; border: none; padding: 15px; border-radius: 15px; outline: none; transition: background-color 0.3s ease;" id="agregar" onclick="agregarALista('Manzanas')"> <i class="fa-solid fa-circle-plus" style="color: white;"></i></button>
             </td>
-            <td>
-              <button id="quitar" onclick="quitarDeLista('Manzanas')"> <i class="fa-solid fa-circle-minus"></i></button>
+            <td style="padding: 0; text-align: center;">
+              <button style="font-size: 24px; width: 60%; height: 80px; border: none; padding: 15px; border-radius: 15px; outline: none; transition: background-color 0.3s ease;" id="quitar" onclick="quitarDeLista('Manzanas')"> <i class="fa-solid fa-circle-minus" style="color: white;"></i></button>
             </td>
-          </tr>
+          </tr>                       
+          
           <tr class="fila-producto">
-            <td><img src="https://via.placeholder.com/100" alt="Naranjas"></td>
-            <td>Naranjas</td>
+            <td class="foto-columna"><img src="https://via.placeholder.com/50" alt="Naranjas"></td>
+            <td>Naranejas</td>
             <td>
               <button style="background-color: rgba(177, 164, 51, 0.521);" id="agregar" onclick="agregarALista('Naranjas')"> <i class="fa-solid fa-circle-plus"></i></button>
             </td>
@@ -259,7 +276,7 @@ h3 {
             </td>
           </tr>
           <tr class="fila-producto">
-            <td><img src="https://via.placeholder.com/100" alt="Plátanos"></td>
+            <td class="foto-columna"><img src="https://via.placeholder.com/50" alt="Plátanos"></td>
             <td>Plátanos</td>
             <td>
               <button style="background-color: rgba(177, 164, 51, 0.521);" id="agregar" onclick="agregarALista('Plátanos')"> <i class="fa-solid fa-circle-plus"></i></button>
@@ -288,7 +305,7 @@ h3 {
 
 
 
-<!-- SCRIPT -->
+<!----- SCRIPT ---->
 <audio id="sonido-caja" src="beep.mp3"></audio>
 <audio id="sonido-eliminar" src="quitar.mp3"></audio>
 <audio id="sonido-eliminar-lista" src="clear.mp3"></audio>
@@ -399,6 +416,10 @@ h3 {
     sonidoEliminar.play(); // Reproducir el sonido
   }
 </script>
+ 
+</body>
+</html>
+
  
 </body>
 </html>
