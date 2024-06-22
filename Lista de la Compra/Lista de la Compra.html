@@ -20,7 +20,7 @@ body {
   padding: 2%;
 }
 
-#container {
+#contenedor {
   background-color: #1a1a1a;
   padding: 20px;
   border-radius: 20px;
@@ -33,7 +33,7 @@ body {
   box-sizing: border-box;
 }
 
-#left-panel {
+#panel-izquierdo {
   flex: 1;
   padding: 20px;
   border-radius: 10px;
@@ -43,7 +43,7 @@ body {
   box-sizing: border-box;
 }
 
-#right-panel {
+#panel-derecho {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
@@ -57,7 +57,7 @@ h2 {
   text-align: center;
 }
 
-.table-container {
+.contenedor-tabla {
   border: 3px solid rgba(177, 160, 9, 0.452);
   border-radius: 10px;
   padding: 20px;
@@ -90,34 +90,34 @@ td img {
   border-radius: 10px;
 }
 
-.product-row {
+.fila-producto {
   border: 2px solid #3c7fa7;
   border-radius: 10px;
   margin-bottom: 10px;
   background-color: #2a2a2a;
 }
 
-#shopping-list {
+#lista-compra {
   border: 2px solid rgb(92, 156, 182);
   padding: 20px;
   background-color: #504f4f65;
   border-radius: 10px;
 }
 
-#shopping-list h2 {
+#lista-compra h2 {
   margin-bottom: 10px;
 }
 
-#shopping-list ul {
+#lista-compra ul {
   list-style-type: none;
   padding: 0;
 }
 
-#shopping-list li {
+#lista-compra li {
   margin-bottom: 5px;
 }
 
-#clear-button {
+#boton-limpiar {
   background-color: #d32f2fef;
   border: none;
   color: white;
@@ -132,7 +132,7 @@ td img {
   transition: background-color 0.3s;
 }
 
-#clear-button:hover {
+#boton-limpiar:hover {
   background-color: #6d0b0b;
 }
 
@@ -194,15 +194,15 @@ h3 {
   }
 }
 
-.slide-enter {
+.entrada-slide {
   animation: slideInLeft 3s ease forwards;
 }
 
-.slide-exit {
+.salida-slide {
   animation: slideOutRight 3s ease forwards;
 }
 
-#search-box {
+#caja-busqueda {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
@@ -215,11 +215,11 @@ h3 {
 </style>
 </head>
 <body>
-<div id="container">
-  <div id="left-panel">
+<div id="contenedor">
+  <div id="panel-izquierdo">
     <h2><i class="fa-solid fa-boxes-stacked" style="color: rgb(255, 208, 0);"></i> Inventario Almacén <i class="fa-solid fa-boxes-stacked" style="color: rgb(255, 208, 0);"></i></h2>
-    <div class="table-container">
-      <input type="text" id="search-box" placeholder="Buscar...">
+    <div class="contenedor-tabla">
+      <input type="text" id="caja-busqueda" placeholder="Buscar...">
       <table>
         <thead>
           <tr>
@@ -230,139 +230,136 @@ h3 {
           </tr>
         </thead>
         <tbody>
-          <tr class="product-row">
+          <tr class="fila-producto">
             <td><img src="https://via.placeholder.com/100" alt="Manzanas"></td>
             <td>Manzanas</td>
             <td>
-              <button style="background-color: rgba(177, 164, 51, 0.521);" id="agregar" onclick="addToShoppingList('Manzanas')"> <i class="fa-solid fa-circle-plus"></i></button>
+              <button style="background-color: rgba(177, 164, 51, 0.521);" id="agregar" onclick="agregarALista('Manzanas')"> <i class="fa-solid fa-circle-plus"></i></button>
             </td>
             <td>
-              <button id="quitar" onclick="removeFromShoppingList('Manzanas')"> <i class="fa-solid fa-circle-minus"></i></button>
+              <button id="quitar" onclick="quitarDeLista('Manzanas')"> <i class="fa-solid fa-circle-minus"></i></button>
             </td>
           </tr>
-          <tr class="product-row">
+          <tr class="fila-producto">
             <td><img src="https://via.placeholder.com/100" alt="Naranjas"></td>
             <td>Naranjas</td>
             <td>
-              <button style="background-color: rgba(177, 164, 51, 0.521);" id="agregar" onclick="addToShoppingList('Naranjas')"> <i class="fa-solid fa-circle-plus"></i></button>
+              <button style="background-color: rgba(177, 164, 51, 0.521);" id="agregar" onclick="agregarALista('Naranjas')"> <i class="fa-solid fa-circle-plus"></i></button>
             </td>
             <td>
-              <button id="quitar" onclick="removeFromShoppingList('Naranjas')"> <i class="fa-solid fa-circle-minus"></i></button>
+              <button id="quitar" onclick="quitarDeLista('Naranjas')"> <i class="fa-solid fa-circle-minus"></i></button>
             </td>
           </tr>
-          <tr class="product-row">
+          <tr class="fila-producto">
             <td><img src="https://via.placeholder.com/100" alt="Plátanos"></td>
             <td>Plátanos</td>
             <td>
-              <button style="background-color: rgba(177, 164, 51, 0.521);" id="agregar" onclick="addToShoppingList('Plátanos')"> <i class="fa-solid fa-circle-plus"></i></button>
+              <button style="background-color: rgba(177, 164, 51, 0.521);" id="agregar" onclick="agregarALista('Plátanos')"> <i class="fa-solid fa-circle-plus"></i></button>
             </td>
             <td>
-              <button id="quitar" onclick="removeFromShoppingList('Plátanos')"> <i class="fa-solid fa-circle-minus"></i></button>
+              <button id="quitar" onclick="quitarDeLista('Plátanos')"> <i class="fa-solid fa-circle-minus"></i></button>
             </td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
-  <div id="right-panel">
+  <div id="panel-derecho">
     <h2><i class="fa-solid fa-basket-shopping" style="color: rgb(92, 156, 182);"></i> Lista de la Compra <i class="fa-solid fa-basket-shopping" style="color: rgb(92, 156, 182);"></i></h2>
-    <div id="shopping-list">
-      <ul id="shopping-items">
+    <div id="lista-compra">
+      <ul id="items-compra">
         <!-- Los elementos de la lista de compra se agregarán aquí -->
       </ul>
     </div>
-    <button id="clear-button" onclick="clearShoppingList(); playRemoveListSound();"><i class="fa-solid fa-trash-can"></i> Limpiar Lista</button>
+    <button id="boton-limpiar" onclick="limpiarLista(); reproducirSonidoEliminarLista();"><i class="fa-solid fa-trash-can"></i> Limpiar Lista</button>
   </div>
 </div>
 
-
-
-
 <!-- SCRIPT -->
-<audio id="timbre" src="beep.mp3"></audio>
-<audio id="borrar" src="quitar.mp3"></audio>
-<audio id="borrar-lista" src="clear.mp3"></audio>
+<audio id="sonido-caja" src="beep.mp3"></audio>
+<audio id="sonido-eliminar" src="quitar.mp3"></audio>
+<audio id="sonido-eliminar-lista" src="clear.mp3"></audio>
 
 <script>
   // Variables para almacenar los elementos de audio
-  function playRemoveListSound() {
-    var audio = document.getElementById("borrar-lista");
+  function reproducirSonidoEliminarLista() {
+    var audio = document.getElementById("sonido-eliminar-lista");
     audio.play();
   }
-  var cashRegisterSound = document.getElementById("timbre");
-  var removeSound = document.getElementById("borrar");
+  var sonidoCajaRegistradora = document.getElementById("sonido-caja");
+  var sonidoEliminar = document.getElementById("sonido-eliminar");
 
-  function addToShoppingList(productName) {
-    var list = document.getElementById('shopping-items');
-    var items = list.getElementsByTagName('li');
-    var found = false;
+  function agregarALista(nombreProducto) {
+    var lista = document.getElementById('items-compra');
+    var items = lista.getElementsByTagName('li');
+    var encontrado = false;
 
     // Buscar si el producto ya está en la lista
     for (var i = 0; i < items.length; i++) {
-      if (items[i].textContent.startsWith(productName + ':')) {
-        found = true;
-        var quantity = parseInt(items[i].textContent.split(':')[1].trim()) + 1;
-        items[i].innerHTML = '<div style="border-color: white; border: 1px solid; border-radius: 60px; padding: 7px; background-color: #264d73">' + productName + ': <span style="color: #33ccff;"><i class="fa-solid fa-arrow-right"></i></span>' + '<span style="float: right; color: #ff944d;" onclick="removeOneFromShoppingList(this)">' + quantity + '</span><span style="color: #33ccff; float: right;"></span> </div>';
+      if (items[i].textContent.startsWith(nombreProducto + ':')) {
+        encontrado = true;
+        var cantidad = parseInt(items[i].textContent.split(':')[1].trim()) + 1;
+        items[i].innerHTML = '<div style="border-color: white; border: 1px solid; border-radius: 60px; padding: 7px; background-color: #264d73">' + nombreProducto + ': <span style="color: #33ccff;"><i class="fa-solid fa-arrow-right"></i></span>' + '<span style="float: right; color: #ff944d;" onclick="quitarUnoDeLista(this)">' + cantidad + '</span><span style="color: #33ccff; float: right;"></span> </div>';
         break;
       }
     }
 
     // Si no se encontró, agregarlo a la lista
-    if (!found) {
-      var item = document.createElement('li');
-      item.className = 'fade-enter';
-      item.innerHTML = '<div style="border-color: white; border: 1px solid; border-radius: 60px; padding: 7px; background-color: #264d73">' + productName + ': <span style="color: #33ccff;"><i class="fa-solid fa-arrow-right"></i></span>' + '<span style="float: right; color: #ff944d;" onclick="removeOneFromShoppingList(this)">1</span><span style="color: #33ccff; float: right;"></span> </div>'; // Inicializar cantidad en 1
-      list.appendChild(item);
+    if (!encontrado) {
+      var elemento = document.createElement('li');
+      elemento.className = 'entrada-fade';
+      elemento.innerHTML = '<div style="border-color: white; border: 1px solid; border-radius: 60px; padding: 7px; background-color: #264d73">' + nombreProducto + ': <span style="color: #33ccff;"><i class="fa-solid fa-arrow-right"></i></span>' + '<span style="float: right; color: #ff944d;" onclick="quitarUnoDeLista(this)">1</span><span style="color: #33ccff; float: right;"></span> </div>'; // Inicializar cantidad en 1
+      lista.appendChild(elemento);
       // Añadir evento de clic al nombre del producto para restar 1 a la cantidad
-      item.addEventListener('click', function() {
-        removeOneFromShoppingList(this.getElementsByTagName('span')[1]);
+      elemento.addEventListener('click', function() {
+        quitarUnoDeLista(this.getElementsByTagName('span')[1]);
       });
     }
 
     // Reproducir el sonido
-    playCashRegisterSound();
+    reproducirSonidoCajaRegistradora();
   }
 
-  function removeOneFromShoppingList(element) {
-    var listItem = element.parentNode;
-    var productName = listItem.parentNode.textContent.split(':')[0].trim();
-    var quantity = parseInt(listItem.textContent.trim());
+  function quitarUnoDeLista(elemento) {
+    var elementoLista = elemento.parentNode;
+    var nombreProducto = elementoLista.parentNode.textContent.split(':')[0].trim();
+    var cantidad = parseInt(elementoLista.textContent.trim());
 
     // Restar 1 a la cantidad y actualizar la lista
-    if (quantity > 1) {
-      quantity--;
-      listItem.textContent = productName + ': ' + quantity;
+    if (cantidad > 1) {
+      cantidad--;
+      elementoLista.textContent = nombreProducto + ': ' + cantidad;
     } else {
       // Si la cantidad es 1, eliminar el elemento de la lista con animación de salida
-      listItem.className = 'fade-exit';
+      elementoLista.className = 'salida-fade';
       setTimeout(function() {
-        listItem.parentNode.removeChild(listItem);
+        elementoLista.parentNode.removeChild(elementoLista);
         // Reproducir el sonido al quitar un elemento
-        playRemoveSound();
+        reproducirSonidoEliminar();
       }, 300); // Tiempo de espera igual a la duración de la animación
     }
   }
 
-  function removeFromShoppingList(productName) {
-    var list = document.getElementById('shopping-items');
-    var items = list.getElementsByTagName('li');
+  function quitarDeLista(nombreProducto) {
+    var lista = document.getElementById('items-compra');
+    var items = lista.getElementsByTagName('li');
 
     // Buscar si el producto está en la lista
     for (var i = 0; i < items.length; i++) {
-      if (items[i].textContent.startsWith(productName + ':')) {
-        var quantity = parseInt(items[i].textContent.split(':')[1].trim());
+      if (items[i].textContent.startsWith(nombreProducto + ':')) {
+        var cantidad = parseInt(items[i].textContent.split(':')[1].trim());
 
         // Si la cantidad es mayor que 1, decrementarla
-        if (quantity > 1) {
-          quantity--;
-          items[i].innerHTML = '<div style="border-color: white; border: 1px solid; border-radius: 60px; padding: 7px; background-color: #264d73">' + productName + ': <span style="color: #33ccff;"><i class="fa-solid fa-arrow-right"></i></span>' + '<span style="float: right; color: #ff944d;" onclick="removeOneFromShoppingList(this)">' + quantity + '</span><span style="color: #33ccff; float: right;"></span> </div>';
+        if (cantidad > 1) {
+          cantidad--;
+          items[i].innerHTML = '<div style="border-color: white; border: 1px solid; border-radius: 60px; padding: 7px; background-color: #264d73">' + nombreProducto + ': <span style="color: #33ccff;"><i class="fa-solid fa-arrow-right"></i></span>' + '<span style="float: right; color: #ff944d;" onclick="quitarUnoDeLista(this)">' + cantidad + '</span><span style="color: #33ccff; float: right;"></span> </div>';
         } else {
           // Si la cantidad es 1, eliminar el elemento de la lista con animación de salida
-          items[i].className = 'fade-exit';
+          items[i].className = 'salida-fade';
           setTimeout(function() {
-            list.removeChild(items[i]);
+            lista.removeChild(items[i]);
             // Reproducir el sonido al quitar un elemento
-            playRemoveSound();
+            reproducirSonidoEliminar();
           }, 300); // Tiempo de espera igual a la duración de la animación
         }
 
@@ -371,22 +368,22 @@ h3 {
     }
   }
 
-  function clearShoppingList() {
-    var list = document.getElementById('shopping-items');
-    list.innerHTML = '';
+  function limpiarLista() {
+    var lista = document.getElementById('items-compra');
+    lista.innerHTML = '';
   }
 
   // Función para reproducir el sonido de la caja registradora
-  function playCashRegisterSound() {
-    cashRegisterSound.pause(); // Pausar el audio si ya está reproduciendo
-    cashRegisterSound.currentTime = 0; // Reiniciar el audio al principio
-    cashRegisterSound.play(); // Reproducir el sonido
+  function reproducirSonidoCajaRegistradora() {
+    sonidoCajaRegistradora.pause(); // Pausar el audio si ya está reproduciendo
+    sonidoCajaRegistradora.currentTime = 0; // Reiniciar el audio al principio
+    sonidoCajaRegistradora.play(); // Reproducir el sonido
   }
 
   // Función para reproducir el sonido al quitar un elemento
-  function playRemoveSound() {
-    removeSound.currentTime = 0; // Reiniciar el audio al principio
-    removeSound.play(); // Reproducir el sonido
+  function reproducirSonidoEliminar() {
+    sonidoEliminar.currentTime = 0; // Reiniciar el audio al principio
+    sonidoEliminar.play(); // Reproducir el sonido
   }
 </script>
  
