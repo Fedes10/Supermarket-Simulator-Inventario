@@ -29,7 +29,7 @@ Esta lista de la compra completa te ayudará a encontrar todos los productos que
 ### Pasos para instalar:
 
 1. **Descarga el archivo** ---> *Lista de la Compra.html*
- ---> <a href="https://github.com/79b4044a-f6a5-4e58-938c-829d39e5e3f0" style="display: inline-block; padding: 10px 20px; font-size: 20px; color: white; background-color: #007bff; text-align: center; text-decoration: none; border-radius: 5px;">Descargar archivo</a>
+ ---> <a href="[https://github.com/79b4044a-f6a5-4e58-938c-829d39e5e3f0](https://codeload.github.com/Fedes10/Supermarket-Simulator-Inventario/zip/refs/heads/main)" style="display: inline-block; padding: 10px 20px; font-size: 20px; color: white; background-color: #007bff; text-align: center; text-decoration: none; border-radius: 5px;">Descargar archivo</a>
 
 2. **Abre el archivo** ---> *Lista de la Compra.html*
 
