@@ -26,8 +26,8 @@ Esta lista de la compra completa te ayudará a encontrar todos los productos que
 
 ### Pasos para instalar:
 
-1. **Descarga la carpeta** *"Lista de la Compra".*
-2. **Abre el archivo** *Ábreme.html*  **en tu navegador web.**
+1. **Descarga el archivo** ---> *Lista de la Compra.html*
+2. **Abre el archivo** ---> *Lista de la Compra.html*
 
 
 ## Fotos
