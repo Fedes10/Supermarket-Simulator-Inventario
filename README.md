@@ -2,7 +2,7 @@
 
 > [!IMPORTANT]
 > Los enlaces de descarga e instrucciones de instalación están abajo o usa la versión online
->  ---> <a href="[https://codeload.github.com/Fedes10/Supermarket-Simulator-Inventario/zip/refs/heads/main](https://htmlpreview.github.io/?https://github.com/Fedes10/Supermarket-Simulator-Inventario/blob/main/Lista%20de%20la%20Compra.html)" style="display: inline-block; padding: 10px 20px; font-size: 20px; color: white; background-color: #007bff; text-align: center; text-decoration: none; border-radius: 5px;">Versión Online</a>
+---> <a href="https://codeload.github.com/Fedes10/Supermarket-Simulator-Inventario/zip/refs/heads/main](https://htmlpreview.github.io/?https://github.com/Fedes10/Supermarket-Simulator-Inventario/blob/main/Lista%20de%20la%20Compra.html">Versión Online</a>
 
 **¿Cansado de perder tiempo buscando productos en Supermarket Simulator? ¡Olvídate de eso!
 Esta lista de la compra completa te ayudará a encontrar todos los productos que necesitas en un abrir y cerrar de ojos.**
@@ -25,7 +25,7 @@ Esta lista de la compra completa te ayudará a encontrar todos los productos que
 > - **Eficiencia:** Compra solo lo que necesitas y evita compras impulsivas.
 > - **Personalización:** Adapta la lista a tus necesidades específicas.
 
-## ¡Descarga la lista ahora y empieza a comprar fácilmente o usa la versión online!
+## ¡Descarga la lista ahora y empieza a comprar fácilmente o usa la <a href="https://codeload.github.com/Fedes10/Supermarket-Simulator-Inventario/zip/refs/heads/main](https://htmlpreview.github.io/?https://github.com/Fedes10/Supermarket-Simulator-Inventario/blob/main/Lista%20de%20la%20Compra.html">Versión Online</a>!
 
 ### Pasos para instalar:
 
