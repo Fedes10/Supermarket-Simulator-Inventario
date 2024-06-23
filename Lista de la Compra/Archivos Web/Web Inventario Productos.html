@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lista de Compra Futurista</title>
+<link rel="icon" href="https://w7.pngwing.com/pngs/152/1007/png-transparent-computer-icons-online-shopping-business-app-store-market-miscellaneous-blue-angle.png" type="image/x-icon">
+<link rel="shortcut icon" href="https://w7.pngwing.com/pngs/152/1007/png-transparent-computer-icons-online-shopping-business-app-store-market-miscellaneous-blue-angle.png" type="image/x-icon">
+<style>
+ body {
+  font-family: Arial, sans-serif;
+  background-color: #272727; /* Mantenido el tono */
+  color: #ffffff;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 2%;
+  padding-bottom: auto;
+  padding-top: auto;
+}
+#container {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  max-width: 1700px; /* Mantenido el ancho */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#left-panel {
+  flex: 1;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  width: 100%;
+  max-width: 1200px;
+}
+
+#panel-izquierdo-izquierdo {
+  padding: 10px;
+  padding-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  max-width: 100px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-right: 2.3%;
+}
+
+#right-panel {
+  flex: 1;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  margin-left: 40px;
+  width: 100%;
+  max-width: 330px;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 2%;
+}
+
+.aisle {
+  border: 3px solid #ffffff; /* Añadido borde para diferenciar los pasillos */
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 0px;
+  margin-top: 2%;
+  height: 170px;
+  width: 91%;
+}
+
+.aisle1 {
+  border: 3px solid #ffffff; /* Añadido borde para diferenciar los pasillos */
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+  height: 170px;
+}
+
+.aisle3 {
+  border: 3px solid #ffffff; /* Añadido borde para diferenciar los pasillos */
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 0px;
+  margin-top: 5.5%;
+  height: 170px;
+}
+
+#shopping-list {
+  border: 2px solid #ffffff; /* Añadido borde para diferenciar los pasillos */
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.product {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.product label {
+  font-weight: bold;
+}
+
+#agregar {
+  background-color: #4caf4f88;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin-left: 10px; /* Mantenido el margen izquierdo */
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#quitar {
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin-left: 0; /* Cambiado el margen izquierdo a 0 */
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#quitar:hover{
+  background-color: #a3a5a39a;
+}
+
+#agregar:hover {
+  background-color: #2c632e;
+}
+
+#shopping-list {
+  border-top: 1px solid #ffffff;
+  padding-top: 20px;
+  background-color: #504f4f65;
+  height: auto;
+  width: 90%;
+}
+
+#shopping-list h2 {
+  margin-bottom: 10px;
+}
+
+#shopping-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#shopping-list li {
+  margin-bottom: 5px;
+}
+
+#clear-button {
+  background-color: #d32f2fef;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#clear-button:hover {
+  background-color: #6d0b0b;
+}
+
+label {
+  font-size: 13px;
+}
+
+p
+{
+  font-size: 13px;
+  text-align: center;
+  color: rgb(226, 88, 100);
+}
+
+h5
+{
+  font-size: 15px;
+  text-align: center;
+  color: rgba(165, 20, 20, 0.801);
+}
+
+h6
+{
+  font-size: 15px;
+  text-align: center;
+  color: rgba(33, 192, 99, 0.993);
+}
+
+h3 {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Forma circular */
+    background-color: #3c7fa7; /* Color de fondo */
+    color: white;
+    text-align: center;
+    line-height: 50px; 
+    font-size: 20px;
+    margin: 5px; 
+    margin-top: 30px;
+  }
+
+  @keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+.slide-enter {
+  animation: slideInLeft 3s ease forwards;
+}
+
+.slide-exit {
+  animation: slideOutRight 3s ease forwards;
+}
+
+#menu-button:hover i {
+  color: rgb(255, 255, 255); 
+}
+
+#menu-text:hover {
+  background-color: rgb(255, 153, 0); 
+  color: rgb(0, 0, 0); 
+}
+
+#menu-button:hover i, #inventory-button:hover i {
+  color: rgb(255, 255, 255); 
+}
+
+#menu-text:hover, #inventory-text:hover {
+  background-color: rgb(255, 153, 0); 
+  color: rgb(0, 0, 0); 
+}
+
+.imagen-circular {
+        width: 35px;
+        border-radius: 50%;
+        object-fit: cover; 
+    }
+
+</style>
+</head>
+<body>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<div id="container">
+
+  <!------ Panel/Caja Izquierdo------>  
+
+  <div id="panel-izquierdo-izquierdo" style="text-align: center;">
+
+    <div class="boton-inicio" id="menu-button">
+      <img src="fedes10.jpg" alt="Imagen Circular" class="imagen-circular">
+    </div>
+    <h2 style="display: inline-block; padding: 5px; border-radius: 5px; font-size: 11px; color: white; margin-top: 0px;">
+       By Fedes10
+    </h2>
+
+  <a href="Lista de la Compra.html" style="text-decoration: none; display: block; margin-bottom: 20px;">
+    <div class="boton-inicio" id="menu-button">
+      <i class="fa-solid fa-home" id="menu-icon" style="color: rgb(255, 145, 0); font-size: 24px; margin-top: 10%;"></i>
+    </div>
+    <h2 id="menu-text" style="display: inline-block; padding: 5px; border: 1px solid rgb(255, 153, 0); border-radius: 5px; font-size: 14px; color: white;">
+      Inicio
+    </h2>
+  </a>
+
+  <a href="Lista de la Compra.html" style="text-decoration: none; display: block;">
+    <div class="boton-inicio" id="inventory-button">
+      <i class="fa-solid fa-box" id="inventory-icon" style="color: rgb(255, 145, 0); font-size: 24px; margin-top: 10%;"></i>
+    </div>
+    <h2 id="inventory-text" style="display: inline-block; padding: 5px; border: 1px solid rgb(255, 153, 0); border-radius: 5px; font-size: 11px; color: white;">
+      Inventario Almacen
+    </h2>
+  </a>
+</div>
+
+  <!------ Panel/Caja Central------>  
+
+  <div id="left-panel">
+    <h2><i class="fa-solid fa-boxes-stacked" style="color: rgb(255, 208, 0);"></i> Inventario Almacén <i class="fa-solid fa-boxes-stacked" style="color: rgb(255, 208, 0);"></i></h2>
+    <table>
+      <tr>
+        <th>Pasillo</th>
+        <th colspan="3">Productos</th>
+      </tr>
+      <tr>
+        <td valign="top">
+          <!----------------------------------------------- PASILLO 1 / Izquierda ----------------------------------------------->
+          <div class="aisle3" style="border-color: rgba(177, 160, 9, 0.452); background-color: rgba(177, 164, 51, 0.521);">
+            <h3>1</h3>
+            <h5><i class="fa-solid fa-circle-chevron-left"></i></h5>
+          </div>
+        </td>
+        
+        <td valign="top">
+          <!-- [1º Estantería Pasillo 1 Izquierda] -->
+          <div class="aisle" style="border-color: rgba(177, 160, 9, 0.452); background-color: #504f4f65;">
+            <table>
+              <tr>
+                <td>
+                  <label>Salmón Azul</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(177, 164, 51, 0.521);" id="agregar" onclick="addToShoppingList('Salmón (azul)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Salmón (azul)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Huevos Pack 8 Normales</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(177, 164, 51, 0.521);" id="agregar" onclick="addToShoppingList('Huevos Pack 8 (normales)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Huevos Pack 8 (normales)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Queso Mozzarella Azul</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(177, 164, 51, 0.521);" id="agregar" onclick="addToShoppingList('Queso Mozzarella (azul)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Queso Mozzarella (azul)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Queso Parmesano Rojo</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(177, 164, 51, 0.521);" id="agregar" onclick="addToShoppingList('Queso Parmesano (rojo)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Queso Parmesano (rojo)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Queso Verde</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(177, 164, 51, 0.521);" id="agregar" onclick="addToShoppingList('Queso (verde)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Queso (verde)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+                <td>
+                  <label>Queso Naranja</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(177, 164, 51, 0.521);" id="agregar" onclick="addToShoppingList('Queso (naranja)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Queso (naranja)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </td>
+        <td valign="top">
+          <!-- [2º Estantería Pasillo 1 Izquierda] -->
+          <div class="aisle" style="border-color: rgba(177, 160, 9, 0.452); background-color: #504f4f65;">
+            <table>
+              <tr>
+                <td>
+                  <label>Filete Grande</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(177, 164, 51, 0.521);" id="agregar" onclick="addToShoppingList('Filete (grande)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Filete (grande)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Chuleta de Ternera Pequeña</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(177, 164, 51, 0.521);" id="agregar" onclick="addToShoppingList('Chuleta de Ternera (pequeña)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Chuleta de Ternera (pequeña)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Yogur Rosa</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(177, 164, 51, 0.521);" id="agregar" onclick="addToShoppingList('Yogur (rosa)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Yogur (rosa)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </td>
+        <td>
+          <!-- [3º Estantería Pasillo 1 Izquierda] -->
+          <div class="aisle" style="border-color: rgba(177, 160, 9, 0.452); background-color: #504f4f65;">
+            <table>
+              <tr>
+                <td>
+                  <label>Salsa Picante Rojo Fuerte</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(177, 164, 51, 0.521);" id="agregar" onclick="addToShoppingList('Salsa Picante (rojo fuerte)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Salsa Picante (rojo fuerte)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Mayonesa</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(177, 164, 51, 0.521);" id="agregar" onclick="addToShoppingList('Mayonesa')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Mayonesa')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Ketchup Rojo Claro</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(177, 164, 51, 0.521);" id="agregar" onclick="addToShoppingList('Ketchup (rojo claro)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Ketchup (rojo claro)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Arroz Azul</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(177, 164, 51, 0.521);" id="agregar" onclick="addToShoppingList('Arroz Basmati (azul)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Arroz Basmati (azul)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Aceite Amarillo</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(177, 164, 51, 0.521);" id="agregar" onclick="addToShoppingList('Aceite (amarillo)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Aceite (amarillo)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Aceite Verde</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(177, 164, 51, 0.521);" id="agregar" onclick="addToShoppingList('Aceite de Oliva (verde)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Aceite de Oliva (verde)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+          <!----------------------------------------------- PASILLO 1 / Derecha ----------------------------------------------->
+          <div class="aisle1" style="border-color: rgba(177, 160, 9, 0.452); background-color:rgba(177, 164, 51, 0.521)">
+            <h3>1</h3>
+            <h6><i class="fa-solid fa-circle-chevron-right"></i></h6>
+          </div>
+        <td valign="top">
+          <!-- [1º Estantería Pasillo 1 Derecha] -->
+          <div class="aisle1" style="border-color: rgba(177, 160, 9, 0.452); background-color: #504f4f65;">
+            <table>
+              <tr>
+                <td>
+                  <label>Azúcar Glas Amarillo</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(177, 164, 51, 0.521);" id="agregar" onclick="addToShoppingList('Azúcar Glas (amarillo)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Azúcar Glas (amarillo)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Tarta Roja</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(177, 164, 51, 0.521);" id="agregar" onclick="addToShoppingList('Tarta (roja)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Tarta (roja)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Tarta Blanca</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(177, 164, 51, 0.521);" id="agregar" onclick="addToShoppingList('Tarta (blanca)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Tarta (blanca)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Chocalate</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(177, 164, 51, 0.521);" id="agregar" onclick="addToShoppingList('Chocalate')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Chocalate')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Chuches</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(177, 164, 51, 0.521);" id="agregar" onclick="addToShoppingList('Chuches')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Chuches')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </td>
+        <td valign="top">
+          <!-- [2º Estantería Pasillo 1 Derecha] -->
+          <div class="aisle1" style="border-color: rgba(218, 197, 8, 0.534); background-color: #504f4f65;">
+            <table>
+              <tr>
+                <td>
+                  <label>Miel</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(177, 164, 51, 0.521);" id="agregar" onclick="addToShoppingList('Miel')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Miel')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Mantequilla de Cacahuete Marrón</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(177, 164, 51, 0.521);" id="agregar" onclick="addToShoppingList('Mantequilla de Cacahuete (marrón)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Mantequilla de Cacahuete (marrón)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Té Negro</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(177, 164, 51, 0.521);" id="agregar" onclick="addToShoppingList('Té Negro')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Té Negro')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Té Verde</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(177, 164, 51, 0.521);" id="agregar" onclick="addToShoppingList('Té Verde')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Té Verde')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Café Tueste Oscuro</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(177, 164, 51, 0.521);" id="agregar" onclick="addToShoppingList('Café Tueste Oscuro')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Café Tueste Oscuro')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Café Tueste Claro</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(177, 164, 51, 0.521);" id="agregar" onclick="addToShoppingList('Café Tueste Claro')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Café Tueste Claro')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </td>
+        <td valign="top">
+          <!-- [3º Estantería Pasillo 1 Derecha] -->
+          <div class="aisle1" style="border-color: rgba(218, 197, 8, 0.534); background-color: #504f4f65;">
+            <table>
+              <tr>
+                <td>
+                  <label>Jabón de Manos</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(177, 164, 51, 0.521);" id="agregar" onclick="addToShoppingList('Jabón de Manos')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Jabón de Manos')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Champú Verde</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(177, 164, 51, 0.521);" id="agregar" onclick="addToShoppingList('Champú (verde)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Champú (verde)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+          <!----------------------------------------------- PASILLO 2 / Izquierda ----------------------------------------------->
+          <div class="aisle1" style="border-color: rgba(16, 87, 82, 0.89); background-color: rgba(41, 134, 128, 0.89); margin-bottom: 20px;">
+            <h3>2</h3>
+            <h5><i class="fa-solid fa-circle-chevron-left"></i></h5>
+          </div>
+        </td>
+        <td valign="top">
+          <!-- [1º Estantería Pasillo 2 Izquierda] -->
+          <div class="aisle1" style="border-color: rgba(16, 87, 82, 0.89); background-color: #504f4f65; margin-bottom: 20px;">
+            <table>
+              <tr>
+                <td>
+                  <label>Leche Normal</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(41, 134, 128, 0.89);" id="agregar" onclick="addToShoppingList('Leche Normal')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Leche Normal')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Agua Embotellada Blanca</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(41, 134, 128, 0.89);" id="agregar" onclick="addToShoppingList('Agua Embotellada (blanca)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Agua Embotellada (blanca)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Leche 6 Bricks</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(41, 134, 128, 0.89);" id="agregar" onclick="addToShoppingList('Leche 6 Bricks')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Leche 6 Bricks')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Agua Embotellada Azul</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(41, 134, 128, 0.89);" id="agregar" onclick="addToShoppingList('Agua Embotellada (azul)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Agua Embotellada (azul)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </td>
+        <td>
+          <!-- [2º Estantería Pasillo 2 Izquierda] -->
+          <div class="aisle1" style="border-color: rgba(16, 87, 82, 0.89); background-color: #504f4f65; margin-bottom: 20px;">
+            <table>
+              <tr>
+                <td>
+                  <label>Refresco Verde</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(41, 134, 128, 0.89);" id="agregar" onclick="addToShoppingList('Refresco (verde)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Refresco (verde)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Refresco Turko</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(41, 134, 128, 0.89);" id="agregar" onclick="addToShoppingList('Refresco Turko')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Refresco Turko')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Refresco Cola</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(41, 134, 128, 0.89);" id="agregar" onclick="addToShoppingList('Refresco Cola')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Refresco Cola')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </td>
+        <td>
+          <!-- [3º Estantería Pasillo 2 Izquierda] -->
+          <div class="aisle1" style="border-color: rgba(16, 87, 82, 0.89); background-color: #504f4f65; margin-bottom: 20px;">
+            <table>
+              <tr>
+                <td>
+                  <label>Zumo Manzana</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(41, 134, 128, 0.89);" id="agregar" onclick="addToShoppingList('Zumo Manzana')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Zumo Manzana')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Zumo Naranja</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(41, 134, 128, 0.89);" id="agregar" onclick="addToShoppingList('Zumo Naranja')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Zumo Naranja')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+          <!----------------------------------------------- PASILLO 3 / Izquierda ----------------------------------------------->
+          <div class="aisle3" style="border-color: rgb(103, 79, 112); background-color: rgba(127, 73, 146, 0.582);">
+            <h3>3</h3>
+            <h5><i class="fa-solid fa-circle-chevron-left"></i></h5>
+          </div>
+        </td>
+        <td valign="top">
+          <!-- [1º Estantería Pasillo 3 Izquierda] -->
+          <div class="aisle" style="border-color: rgb(103, 79, 112); background-color: #504f4f65;">
+            <table>
+              <tr>
+                <td>
+                  <label>Limpiador Azul</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(127, 73, 146, 0.582);" id="agregar" onclick="addToShoppingList('Limpiador (azul)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Limpiador (azul)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Pastilla para lavavajillas</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(127, 73, 146, 0.582);" id="agregar" onclick="addToShoppingList('Pastilla para lavavajillas')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Pastilla para lavavajillas')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </td>
+        <td>
+          <!-- [2º Estantería Pasillo 3 Izquierda] -->
+          <div class="aisle" style="border-color: rgb(103, 79, 112); background-color: #504f4f65;">
+            <table>
+              <tr>
+                <td>
+                  <label>Azúcar Moreno Naranja</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(127, 73, 146, 0.582);" id="agregar" onclick="addToShoppingList('Azúcar Moreno (naranja)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Azúcar Moreno (naranja)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Espaguetis</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(127, 73, 146, 0.582);" id="agregar" onclick="addToShoppingList('Espaguetis')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Espaguetis')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Azúcar Glas Blanco</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(127, 73, 146, 0.582);" id="agregar" onclick="addToShoppingList('Azúcar Glas (blanco)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Azúcar Glas (blanco)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+          <!----------------------------------------------- PASILLO 3 / Derecha ----------------------------------------------->
+          <div class="aisle1" style="border-color: rgb(103, 79, 112); background-color: rgba(127, 73, 146, 0.582);">
+            <h3>3</h3>
+            <h6><i class="fa-solid fa-circle-chevron-right"></i></h6>
+          </div>
+        <td valign="top">
+          <!-- [1º Estantería Pasillo 3 Derecha] -->
+          <div class="aisle1" style="border-color: rgb(103, 79, 112); background-color: #504f4f65;">
+            <table>
+              <tr>
+                <td>
+                  <label>Pizza Mezcla Negra</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(127, 73, 146, 0.582);" id="agregar" onclick="addToShoppingList('Pizza Mezcla (negra)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Pizza Mezcla (negra)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Patatas Congeladas</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(127, 73, 146, 0.582);" id="agregar" onclick="addToShoppingList('Patatas Congeladas')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Patatas Congeladas')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Escalope Gratinado Blanco</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(127, 73, 146, 0.582);" id="agregar" onclick="addToShoppingList('Escalope Gratinado (blanco)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Escalope Gratinado (blanco)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Musaka Morado</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(127, 73, 146, 0.582);" id="agregar" onclick="addToShoppingList('Musaka (morado)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Musaka (morado)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>              
+            </table>
+          </div>
+        </td>
+        <td valign="top">
+          <!-- [2º Estantería Pasillo 3 Derecha] -->
+          <div class="aisle1" style="border-color: rgb(103, 79, 112); background-color: #504f4f65;">
+            <table>
+              <tr>
+                <td>
+                  <label>Pizza Cheddar Roja</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(127, 73, 146, 0.582);" id="agregar" onclick="addToShoppingList('Pizza Cheddar (roja)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Pizza Cheddar (roja)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr> 
+              <tr>
+                <td>
+                  <label>Helado de Chocalate Cono</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(127, 73, 146, 0.582);" id="agregar" onclick="addToShoppingList('Helado de Chocalate (cono)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Helado de Chocalate (cono)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr> 
+              <tr>
+                <td>
+                  <label>Sushi Pequeño</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(127, 73, 146, 0.582);" id="agregar" onclick="addToShoppingList('Sushi Pequeño')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Sushi Pequeño')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>               
+            </table>
+          </div>
+        </td>
+        <td valign="top">
+          <!-- [3º Estantería Pasillo 3 Derecha] -->
+          <div class="aisle1" style="border-color: rgb(103, 79, 112); background-color: #504f4f65;">
+            <table>
+              <tr>
+                <td>
+                  <label>Macarrones Azules</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(127, 73, 146, 0.582);" id="agregar" onclick="addToShoppingList('Macarrones (azules)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Macarrones (azules)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr> 
+              <tr>
+                <td>
+                  <label>Cereales Marrones</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(127, 73, 146, 0.582);" id="agregar" onclick="addToShoppingList('Cereales (marrones)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Cereales (marrones)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr> 
+              <tr>
+                <td>
+                  <label>Cereales Amarillos</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(127, 73, 146, 0.582);" id="agregar" onclick="addToShoppingList('Cereales (amarillos)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Cereales (amarillos)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr> 
+              <tr>
+                <td>
+                  <label>Cereales Blancos</label>
+                </td>
+                <td>
+                  <button style="background-color: rgba(127, 73, 146, 0.582);" id="agregar" onclick="addToShoppingList('Cereales (blancos)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Cereales (blancos)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>           
+            </table>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+          <!----------------------------------------------- PASILLO 4 / Izquierda ----------------------------------------------->
+          <div class="aisle3" style="border-color: rgb(124, 31, 31); background-color: rgb(146, 63, 63)">
+            <h3>4</h3>
+            <h5><i class="fa-solid fa-circle-chevron-left"></i></h5>
+          </div>
+        </td>
+        <td valign="top">
+          <!-- [1º Estantería Pasillo 4 Izquierda] -->
+          <div class="aisle" style="border-color: rgb(124, 31, 31); background-color: #504f4f65;">
+            <table>
+              <tr>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+              </tr> 
+              <tr>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+              </tr> 
+              <tr>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+
+                </td>
+                <td>
+
+
+                </td>
+              </tr> 
+            </table>
+          </div>
+        </td>
+        <td>
+          <!-- [2º Estantería Pasillo 4 Izquierda] -->
+          <div class="aisle" style="border-color: rgb(124, 31, 31); background-color: #504f4f65;">
+            <table>
+              <tr>
+                <td>
+                  <label>Pan de Molde</label>
+                </td>
+                <td>
+                  <button style="background-color: rgb(146, 63, 63);" id="agregar" onclick="addToShoppingList('Pan de Molde')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Pan de Molde')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr> 
+              <tr>
+                <td>
+                  <label>Harina Roja</label>
+                </td>
+                <td>
+                  <button style="background-color: rgb(146, 63, 63);" id="agregar" onclick="addToShoppingList('Harina (roja)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Harina (roja)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr> 
+              <tr>
+                <td>
+                  <label>Harina Azul</label>
+                </td>
+                <td>
+                  <button style="background-color: rgb(146, 63, 63);" id="agregar" onclick="addToShoppingList('Harina (azul)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Harina (azul)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Pasta Roja</label>
+                </td>
+                <td>
+                  <button style="background-color: rgb(146, 63, 63);" id="agregar" onclick="addToShoppingList('Pasta (roja)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Pasta (roja)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr> 
+            </table>
+          </div>
+        </td>
+        <td>
+          <!-- [3º Estantería Pasillo 4 Izquierda] -->
+          <div class="aisle" style="border-color: rgb(124, 31, 31); background-color: #504f4f65;">
+            <table>
+              <tr>
+                <td>
+                  <label>Atún Redondo</label>
+                </td>
+                <td>
+                  <button style="background-color: rgb(146, 63, 63);" id="agregar" onclick="addToShoppingList('Atún (redondo)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Atún (redondo)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Palitos de Cangrejo</label>
+                </td>
+                <td>
+                  <button style="background-color: rgb(146, 63, 63);" id="agregar" onclick="addToShoppingList('Palitos de Cangrejo')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Palitos de Cangrejo')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Huevos Docena Grandes</label>
+                </td>
+                <td>
+                  <button style="background-color: rgb(146, 63, 63);" id="agregar" onclick="addToShoppingList('Huevos Docena (grandes)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Huevos Docena (grandes)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Sushi Grande</label>
+                </td>
+                <td>
+                  <button style="background-color: rgb(146, 63, 63);" id="agregar" onclick="addToShoppingList('Sushi Grande')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Sushi Grande')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+          <!----------------------------------------------- PASILLO 4 / Derecha ----------------------------------------------->
+          <div class="aisle1" style="border-color: rgb(124, 31, 31); background-color: rgb(146, 63, 63)">
+            <h3>4</h3>
+            <h6><i class="fa-solid fa-circle-chevron-right"></i></h6>
+          </div>
+        <td valign="top">
+          <!-- [1º Estantería Pasillo 4 Derecha] -->
+          <div class="aisle1" style="border-color: rgb(124, 31, 31); background-color: #504f4f65;">
+            <table>
+              <tr>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+              </tr>
+              <tr>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+              </tr>              
+            </table>
+          </div>
+        </td>
+        <td valign="top">
+          <!-- [2º Estantería Pasillo 4 Derecha] -->
+          <div class="aisle1" style="border-color: rgb(124, 31, 31); background-color: #504f4f65;">
+            <table>
+              <tr>
+                <td>
+                  <label>Saco de Patatas</label>
+                </td>
+                <td>
+                  <button style="background-color: rgb(146, 63, 63);" id="agregar" onclick="addToShoppingList('Saco de Patatas')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Saco de Patatas')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Pollo</label>
+                </td>
+                <td>
+                  <button style="background-color: rgb(146, 63, 63);" id="agregar" onclick="addToShoppingList('Pollo')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Pollo')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </td>
+        <td valign="top">
+          <!-- [3º Estantería Pasillo 4 Derecha] -->
+          <div class="aisle1" style="border-color: rgb(124, 31, 31); background-color: #504f4f65;">
+            <table>
+              <tr>
+                <td>
+                  <label>Papel Higiénico</label>
+                </td>
+                <td>
+                  <button style="background-color: rgb(146, 63, 63);" id="agregar" onclick="addToShoppingList('Papel Higiénico')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Papel Higiénico')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Lejía</label>
+                </td>
+                <td>
+                  <button style="background-color: rgb(146, 63, 63);" id="agregar" onclick="addToShoppingList('Lejía')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Lejía')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>              
+            </table>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+          <!----------------------------------------------- PASILLO 5 / POR CONFIRMAR ----------------------------------------------->
+          <div class="aisle1" style="border-color: rgba(194, 192, 192, 0.87); background-color: #c5bfbf73;">
+            <table>
+                  <h3>5</h3>
+              <tr>
+                <td>
+                  <!-- Producto 2 -->
+                </td>
+                <td>
+                  <!-- Botón para agregar -->
+                </td>
+              </tr>
+              <!-- Continuar con los productos del Pasillo -->
+            </table>
+          </div>
+        </td>
+        <td valign="top">
+          <div class="aisle1" style="border-color: rgba(194, 192, 192, 0.87); background-color: #504f4f65;">
+            <table>
+              <tr>
+                <td>
+                  <label>Sal</label>
+                </td>
+                <td>
+                  <button style="background-color: #c5bfbf73;" id="agregar" onclick="addToShoppingList('Sal')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Sal')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>  
+            </table>
+          </div>
+        </td>
+        <td valign="top">
+          <div class="aisle1" style="border-color: rgba(194, 192, 192, 0.87); background-color: #504f4f65;">
+            <table>
+              <tr>
+                <td>
+                  <label>Huevos Pack 4 Pequeños</label>
+                </td>
+                <td>
+                  <button style="background-color: #c5bfbf73;" id="agregar" onclick="addToShoppingList('Huevos Pack 4 (pequeños)')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Huevos Pack 4 (pequeños)')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>  
+              <tr>
+                <td>
+                  <label>Mantequilla</label>
+                </td>
+                <td>
+                  <button style="background-color: #c5bfbf73;" id="agregar" onclick="addToShoppingList('Mantequilla')"> <i class="fa-solid fa-circle-plus"></i></button>
+                  <button id="quitar" onclick="removeFromShoppingList('Mantequilla')"> <i class="fa-solid fa-circle-minus"></i></button>
+                </td>
+              </tr>  
+            </table>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <!-----------------------------------------------LISTA DE LA COMPRA (CAJA DERECHA) ----------------------------------------------->
+  <div id="right-panel">
+    <h2><i class="fa-solid fa-basket-shopping" style="color: rgb(92, 156, 182);"></i> Lista de la Compra <i class="fa-solid fa-basket-shopping" style="color: rgb(92, 156, 182);"></i></h2>
+    <div class="aisle" id="shopping-list">
+      <ul id="shopping-items">
+        <!-- Los elementos de la lista de compra se agregarán aquí -->
+      </ul>
+      <button id="clear-button" onclick="clearShoppingList(); playRemoveListSound();"><i class="fa-solid fa-trash-can"></i> Limpiar Lista</button>
+    </div>
+  </div>
+</div>
+
+<!-- SCRIPT -->
+<audio id="timbre" src="beep.mp3"></audio>
+<audio id="borrar" src="quitar.mp3"></audio>
+<audio id="borrar-lista" src="clear.mp3"></audio>
+
+<script>
+  // Variables para almacenar los elementos de audio
+  function playRemoveListSound() {
+    var audio = document.getElementById("borrar-lista");
+    audio.play();
+  }
+  var cashRegisterSound = document.getElementById("timbre");
+  var removeSound = document.getElementById("borrar");
+
+  function addToShoppingList(productName) {
+    var list = document.getElementById('shopping-items');
+    var items = list.getElementsByTagName('li');
+    var found = false;
+
+    // Buscar si el producto ya está en la lista
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].textContent.startsWith(productName + ':')) {
+        found = true;
+        var quantity = parseInt(items[i].textContent.split(':')[1].trim()) + 1;
+        items[i].innerHTML = '<div style="border-color: white; border: 1px solid; border-radius: 60px; padding: 7px; background-color: #264d73">' + productName + ': <span style="color: #33ccff;"><i class="fa-solid fa-arrow-right"></i></span>' + '<span style="float: right; color: #ff944d;" onclick="removeOneFromShoppingList(this)">' + quantity + '</span><span style="color: #33ccff; float: right;"></span> </div>';
+        break;
+      }
+    }
+
+    // Si no se encontró, agregarlo a la lista
+    if (!found) {
+      var item = document.createElement('li');
+      item.className = 'fade-enter';
+      item.innerHTML = '<div style="border-color: white; border: 1px solid; border-radius: 60px; padding: 7px; background-color: #264d73">' + productName + ': <span style="color: #33ccff;"><i class="fa-solid fa-arrow-right"></i></span>' + '<span style="float: right; color: #ff944d;" onclick="removeOneFromShoppingList(this)">1</span><span style="color: #33ccff; float: right;"></span> </div>'; // Inicializar cantidad en 1
+      list.appendChild(item);
+      // Añadir evento de clic al nombre del producto para restar 1 a la cantidad
+      item.addEventListener('click', function() {
+        removeOneFromShoppingList(this.getElementsByTagName('span')[1]);
+      });
+    }
+
+    // Reproducir el sonido
+    playCashRegisterSound();
+  }
+
+  function removeOneFromShoppingList(element) {
+    var listItem = element.parentNode;
+    var productName = listItem.parentNode.textContent.split(':')[0].trim();
+    var quantity = parseInt(listItem.textContent.trim());
+
+    // Restar 1 a la cantidad y actualizar la lista
+    if (quantity > 1) {
+      quantity--;
+      listItem.textContent = productName + ': ' + quantity;
+    } else {
+      // Si la cantidad es 1, eliminar el elemento de la lista con animación de salida
+      listItem.className = 'fade-exit';
+      setTimeout(function() {
+        listItem.parentNode.removeChild(listItem);
+        // Reproducir el sonido al quitar un elemento
+        playRemoveSound();
+      }, 300); // Tiempo de espera igual a la duración de la animación
+    }
+  }
+
+  function removeFromShoppingList(productName) {
+    var list = document.getElementById('shopping-items');
+    var items = list.getElementsByTagName('li');
+
+    // Buscar si el producto está en la lista
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].textContent.startsWith(productName + ':')) {
+        var quantity = parseInt(items[i].textContent.split(':')[1].trim());
+
+        // Si la cantidad es mayor que 1, decrementarla
+        if (quantity > 1) {
+          quantity--;
+          items[i].innerHTML = '<div style="border-color: white; border: 1px solid; border-radius: 60px; padding: 7px; background-color: #264d73">' + productName + ': <span style="color: #33ccff;"><i class="fa-solid fa-arrow-right"></i></span>' + '<span style="float: right; color: #ff944d;" onclick="removeOneFromShoppingList(this)">' + quantity + '</span><span style="color: #33ccff; float: right;"></span> </div>';
+        } else {
+          // Si la cantidad es 1, eliminar el elemento de la lista con animación de salida
+          items[i].className = 'fade-exit';
+          setTimeout(function() {
+            list.removeChild(items[i]);
+            // Reproducir el sonido al quitar un elemento
+            playRemoveSound();
+          }, 300); // Tiempo de espera igual a la duración de la animación
+        }
+
+        break;
+      }
+    }
+  }
+
+  function clearShoppingList() {
+    var list = document.getElementById('shopping-items');
+    list.innerHTML = '';
+  }
+
+  // Función para reproducir el sonido de la caja registradora
+  function playCashRegisterSound() {
+    cashRegisterSound.pause(); // Pausar el audio si ya está reproduciendo
+    cashRegisterSound.currentTime = 0; // Reiniciar el audio al principio
+    cashRegisterSound.play(); // Reproducir el sonido
+  }
+
+  // Función para reproducir el sonido al quitar un elemento
+  function playRemoveSound() {
+    removeSound.currentTime = 0; // Reiniciar el audio al principio
+    removeSound.play(); // Reproducir el sonido
+  }
+</script>
+ 
+</body>
+</html>
