@@ -4,7 +4,7 @@
 > Los enlaces de descarga e instrucciones de instalación están abajo o usa la versión online
 ---> <a href="https://htmlpreview.github.io/?https://github.com/Fedes10/Supermarket-Simulator-Inventario/blob/main/Lista%20de%20la%20Compra.html">Versión Online</a>
 
-**¿Cansado de perder tiempo memorizando los productos que te faltan para luego hacer el pedido en Supermarket Simulator? ¡Olvídate de eso!
+**¿Cansado de perder tiempo memorizando los productos que te faltan para luego hacer el pedido en Supermarket Simulator? ¡Olvídate de eso!**
 
 **Esta lista de la compra te ayudará a apuntar y recordar todos los productos que necesitas.**
 
