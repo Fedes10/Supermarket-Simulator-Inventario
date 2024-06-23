@@ -1,4 +1,8 @@
 # ¡Lista de la compra para Supermarket Simulator!
+> [!IMPORTANT]
+> Los pasos de instalación están abajo
+
+Enlace de descarga [Descargar](https://github.com/79b4044a-f6a5-4e58-938c-829d39e5e3f0).
 
 ¿Cansado de perder tiempo buscando productos en Supermarket Simulator? ¡Olvídate de eso!
 
@@ -28,7 +32,7 @@ Esta lista de la compra completa te ayudará a encontrar todos los productos que
 ### Pasos para instalar:
 
 1. **Descarga el archivo** ---> *Lista de la Compra.html*
- ---> <a href="https://github.com/usuario/repositorio/raw/main/ruta/al/archivo.zip" style="display: inline-block; padding: 10px 20px; font-size: 20px; color: white; background-color: #007bff; text-align: center; text-decoration: none; border-radius: 5px;">Descargar archivo</a>
+ ---> <a href="https://github.com/79b4044a-f6a5-4e58-938c-829d39e5e3f0" style="display: inline-block; padding: 10px 20px; font-size: 20px; color: white; background-color: #007bff; text-align: center; text-decoration: none; border-radius: 5px;">Descargar archivo</a>
 
 3. **Abre el archivo** ---> *Lista de la Compra.html*
 
