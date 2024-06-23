@@ -30,6 +30,7 @@ Esta lista de la compra completa te ayudará a encontrar todos los productos que
 <a href="https://github.com/usuario/repositorio/raw/main/ruta/al/archivo.zip" style="display: inline-block; padding: 10px 20px; font-size: 20px; color: white; background-color: #007bff; text-align: center; text-decoration: none; border-radius: 5px;">
   Descargar archivo
 </a>
+
 2. **Abre el archivo** ---> *Lista de la Compra.html*
 
 
