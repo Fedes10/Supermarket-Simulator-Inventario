@@ -38,7 +38,7 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-  max-width: 1200px;
+  max-width: 1000px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -47,10 +47,10 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-  max-width: 330px;
+  max-width: 360px;
   width: 100%;
   box-sizing: border-box;
-  margin-left: 3%;
+  margin-left: 2%;
 }
 
 #panel-izquierdo-izquierdo {
@@ -61,7 +61,7 @@ body {
   max-width: 100px;
   width: 100%;
   box-sizing: border-box;
-  margin-right: 3%;
+  margin-right: 2%;
 }
 
 
@@ -122,9 +122,10 @@ th.foto-columna, td.foto-columna {
 
 #lista-compra {
   border: 2px solid rgb(92, 156, 182);
-  padding: 20px;
+  padding: 5px;
   background-color: #504f4f65;
   border-radius: 10px;
+  font-size: 15px;
 }
 
 #lista-compra h2 {
@@ -137,7 +138,7 @@ th.foto-columna, td.foto-columna {
 }
 
 #lista-compra li {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 #boton-limpiar {
@@ -188,7 +189,7 @@ h3 {
   height: 50px;
   border-radius: 50%;
   background-color: #3c7fa7;
-  color: white;
+  color: rgba(255, 255, 255, 0.664);
   text-align: center;
   line-height: 50px;
   font-size: 20px;
@@ -825,8 +826,316 @@ h3 {
               <button id="quitar" onclick="quitarDeLista('Atún, Stark')"><i class="fa-solid fa-circle-minus" style="color: white;"></i></button>
             </td>
           </tr>
-          
-        </tbody>
+          <!-- Producto -->
+          <tr class="fila-producto">
+            <td class="foto-columna"><img src="https://static.wikia.nocookie.net/supermarket-simulator/images/3/37/Eggs_%284-Pack%29_Bio.png" alt="Atún Stark"></td>
+            <td>Huevos Pack de 4 Bio</td>
+            <td style="padding: 0; text-align: center;">
+              <button id="agregar" onclick="agregarALista('Huevos Pack de 4, Bio')"><i class="fa-solid fa-circle-plus" style="color: white;"></i></button>
+            </td>
+            <td style="padding: 0; text-align: center;">
+              <button id="quitar" onclick="quitarDeLista('Huevos Pack de 4, Bio')"><i class="fa-solid fa-circle-minus" style="color: white;"></i></button>
+            </td>
+          </tr>
+          <!-- Producto -->
+          <tr class="fila-producto">
+            <td class="foto-columna"><img src="https://static.wikia.nocookie.net/supermarket-simulator/images/6/61/Sugar_Powdered_Pablo.png" alt="Azúcar Glas Pablo"></td>
+            <td>Azúcar Glas Pablo</td>
+            <td style="padding: 0; text-align: center;">
+              <button id="agregar" onclick="agregarALista('Azúcar Glas, Pablo')"><i class="fa-solid fa-circle-plus" style="color: white;"></i></button>
+            </td>
+            <td style="padding: 0; text-align: center;">
+              <button id="quitar" onclick="quitarDeLista('Azúcar Glas, Pablo')"><i class="fa-solid fa-circle-minus" style="color: white;"></i></button>
+            </td>
+          </tr>
+          <!-- Producto -->
+          <tr class="fila-producto">
+            <td class="foto-columna"><img src="https://static.wikia.nocookie.net/supermarket-simulator/images/b/b7/Butter_Paysans.png" alt="Mantequilla Paysans"></td>
+            <td>Mantequilla Paysans</td>
+            <td style="padding: 0; text-align: center;">
+              <button id="agregar" onclick="agregarALista('Mantequilla, Paysans')"><i class="fa-solid fa-circle-plus" style="color: white;"></i></button>
+            </td>
+            <td style="padding: 0; text-align: center;">
+              <button id="quitar" onclick="quitarDeLista('Mantequilla, Paysans')"><i class="fa-solid fa-circle-minus" style="color: white;"></i></button>
+            </td>
+          </tr>
+          <!-- Producto -->
+          <tr class="fila-producto">
+            <td class="foto-columna"><img src="https://static.wikia.nocookie.net/supermarket-simulator/images/a/a9/Cereal_Honey_Bees.png" alt="Cereales Honey Bees"></td>
+            <td>Cereales Honey Bees</td>
+            <td style="padding: 0; text-align: center;">
+              <button id="agregar" onclick="agregarALista('Cereales, Honey Bees')"><i class="fa-solid fa-circle-plus" style="color: white;"></i></button>
+            </td>
+            <td style="padding: 0; text-align: center;">
+              <button id="quitar" onclick="quitarDeLista('Cereales, Honey Bees')"><i class="fa-solid fa-circle-minus" style="color: white;"></i></button>
+            </td>
+          </tr>
+          <!-- Producto -->
+          <tr class="fila-producto">
+            <td class="foto-columna"><img src="https://static.wikia.nocookie.net/supermarket-simulator/images/9/99/Chicken_Mwef.png" alt="Pollo Mwef"></td>
+            <td>Pollo Mwef</td>
+            <td style="padding: 0; text-align: center;">
+              <button id="agregar" onclick="agregarALista('Pollo, Mwef')"><i class="fa-solid fa-circle-plus" style="color: white;"></i></button>
+            </td>
+            <td style="padding: 0; text-align: center;">
+              <button id="quitar" onclick="quitarDeLista('Pollo, Mwef')"><i class="fa-solid fa-circle-minus" style="color: white;"></i></button>
+            </td>
+          </tr>
+          <!-- Producto -->
+          <tr class="fila-producto">
+            <td class="foto-columna"><img src="https://static.wikia.nocookie.net/supermarket-simulator/images/c/c5/French_Fries_Vandame%27s.png" alt="Patatas Congeladas Vandame's"></td>
+            <td>Patatas Congeladas Vandame's</td>
+            <td style="padding: 0; text-align: center;">
+              <button id="agregar" onclick="agregarALista('Patatas Congeladas, Vandames')"><i class="fa-solid fa-circle-plus" style="color: white;"></i></button>
+            </td>
+            <td style="padding: 0; text-align: center;">
+              <button id="quitar" onclick="quitarDeLista('Patatas Congeladas, Vandames')"><i class="fa-solid fa-circle-minus" style="color: white;"></i></button>
+            </td>
+          </tr>
+          <!-- Producto -->
+          <tr class="fila-producto">
+            <td class="foto-columna"><img src="https://static.wikia.nocookie.net/supermarket-simulator/images/1/16/Pizza_Mixed_DeNiro.png" alt="Pizza Mezcla DeNiro"></td>
+            <td>Pizza Mezcla DeNiro</td>
+            <td style="padding: 0; text-align: center;">
+              <button id="agregar" onclick="agregarALista('Pizza Mezcla, DeNiro')"><i class="fa-solid fa-circle-plus" style="color: white;"></i></button>
+            </td>
+            <td style="padding: 0; text-align: center;">
+              <button id="quitar" onclick="quitarDeLista('Pizza Mezcla, DeNiro')"><i class="fa-solid fa-circle-minus" style="color: white;"></i></button>
+            </td>
+          </tr>
+          <!-- Producto -->
+          <tr class="fila-producto">
+            <td class="foto-columna"><img src="https://static.wikia.nocookie.net/supermarket-simulator/images/4/41/Potato_Bag_Miam.png" alt="Saco de patatas Miam"></td>
+            <td>Saco de patatas Miam</td>
+            <td style="padding: 0; text-align: center;">
+              <button id="agregar" onclick="agregarALista('Saco de patatas, Miam')"><i class="fa-solid fa-circle-plus" style="color: white;"></i></button>
+            </td>
+            <td style="padding: 0; text-align: center;">
+              <button id="quitar" onclick="quitarDeLista('Saco de patatas, Miam')"><i class="fa-solid fa-circle-minus" style="color: white;"></i></button>
+            </td>
+          </tr>
+          <!-- Producto -->
+          <tr class="fila-producto">
+            <td class="foto-columna"><img src="https://static.wikia.nocookie.net/supermarket-simulator/images/8/8b/Cheese_Mimolette.png" alt="Queso Mimolette"></td>
+            <td>Queso Mimolette</td>
+            <td style="padding: 0; text-align: center;">
+              <button id="agregar" onclick="agregarALista('Queso, Mimolette')"><i class="fa-solid fa-circle-plus" style="color: white;"></i></button>
+            </td>
+            <td style="padding: 0; text-align: center;">
+              <button id="quitar" onclick="quitarDeLista('Queso, Mimolette')"><i class="fa-solid fa-circle-minus" style="color: white;"></i></button>
+            </td>
+          </tr>
+          <!-- Producto -->
+          <tr class="fila-producto">
+            <td class="foto-columna"><img src="https://static.wikia.nocookie.net/supermarket-simulator/images/6/6b/Coffee_Light_Roast_Narvalo.png" alt="Café Tueste Claro Narvalo"></td>
+            <td>Café Tueste Claro Narvalo</td>
+            <td style="padding: 0; text-align: center;">
+              <button id="agregar" onclick="agregarALista('Café Tueste Claro, Narvalo')"><i class="fa-solid fa-circle-plus" style="color: white;"></i></button>
+            </td>
+            <td style="padding: 0; text-align: center;">
+              <button id="quitar" onclick="quitarDeLista('Café Tueste Claro, Narvalo')"><i class="fa-solid fa-circle-minus" style="color: white;"></i></button>
+            </td>
+          </tr>
+          <!-- Producto -->
+          <tr class="fila-producto">
+            <td class="foto-columna"><img src="https://static.wikia.nocookie.net/supermarket-simulator/images/b/ba/Bottled_Water_Montcuq.png" alt="Agua embotellada Montcuq"></td>
+            <td>Agua embotellada Montcuq</td>
+            <td style="padding: 0; text-align: center;">
+              <button id="agregar" onclick="agregarALista('Agua embotellada, Montcuq')"><i class="fa-solid fa-circle-plus" style="color: white;"></i></button>
+            </td>
+            <td style="padding: 0; text-align: center;">
+              <button id="quitar" onclick="quitarDeLista('Agua embotellada, Montcuq')"><i class="fa-solid fa-circle-minus" style="color: white;"></i></button>
+            </td>
+          </tr>
+          <!-- Producto -->
+          <tr class="fila-producto">
+            <td class="foto-columna"><img src="https://static.wikia.nocookie.net/supermarket-simulator/images/6/62/Eggs_%2812-Pack%29_Bio.png" alt="Huevos Docena Bio"></td>
+            <td>Huevos Docena Bio</td>
+            <td style="padding: 0; text-align: center;">
+              <button id="agregar" onclick="agregarALista('Huevos Docena, Bio')"><i class="fa-solid fa-circle-plus" style="color: white;"></i></button>
+            </td>
+            <td style="padding: 0; text-align: center;">
+              <button id="quitar" onclick="quitarDeLista('Huevos Docena, Bio')"><i class="fa-solid fa-circle-minus" style="color: white;"></i></button>
+            </td>
+          </tr>
+          <!-- Producto -->
+          <tr class="fila-producto">
+            <td class="foto-columna"><img src="https://static.wikia.nocookie.net/supermarket-simulator/images/0/01/Pasta_Elbows_Lustupacru.png" alt="Macarrones Lustupacru"></td>
+            <td>Macarrones Lustupacru</td>
+            <td style="padding: 0; text-align: center;">
+              <button id="agregar" onclick="agregarALista('Macarrones, Lustupacru')"><i class="fa-solid fa-circle-plus" style="color: white;"></i></button>
+            </td>
+            <td style="padding: 0; text-align: center;">
+              <button id="quitar" onclick="quitarDeLista('Macarrones, Lustupacru')"><i class="fa-solid fa-circle-minus" style="color: white;"></i></button>
+            </td>
+          </tr>
+          <!-- Producto -->
+          <tr class="fila-producto">
+            <td class="foto-columna"><img src="https://static.wikia.nocookie.net/supermarket-simulator/images/6/60/Sugar_Brown_Susu.png" alt="Azúcar Moreno Susu"></td>
+            <td>Azúcar Moreno Susu</td>
+            <td style="padding: 0; text-align: center;">
+              <button id="agregar" onclick="agregarALista('Azúcar Moreno, Susu')"><i class="fa-solid fa-circle-plus" style="color: white;"></i></button>
+            </td>
+            <td style="padding: 0; text-align: center;">
+              <button id="quitar" onclick="quitarDeLista('Azúcar Moreno, Susu')"><i class="fa-solid fa-circle-minus" style="color: white;"></i></button>
+            </td>
+          </tr>
+          <!-- Producto -->
+          <tr class="fila-producto">
+            <td class="foto-columna"><img src="https://static.wikia.nocookie.net/supermarket-simulator/images/3/3e/Tea_Green_Tea_Palace.png" alt="Té Verde Tea Palace"></td>
+            <td>Té Verde Tea Palace</td>
+            <td style="padding: 0; text-align: center;">
+              <button id="agregar" onclick="agregarALista('Té Verde, Tea Palace')"><i class="fa-solid fa-circle-plus" style="color: white;"></i></button>
+            </td>
+            <td style="padding: 0; text-align: center;">
+              <button id="quitar" onclick="quitarDeLista('Té Verde, Tea Palace')"><i class="fa-solid fa-circle-minus" style="color: white;"></i></button>
+            </td>
+          </tr>
+          <!-- Producto -->
+          <tr class="fila-producto">
+            <td class="foto-columna"><img src="https://static.wikia.nocookie.net/supermarket-simulator/images/7/75/Moussaka_Ronpoint.png" alt="Musaka Ronpoint"></td>
+            <td>Musaka Ronpoint</td>
+            <td style="padding: 0; text-align: center;">
+              <button id="agregar" onclick="agregarALista('Musaka, Ronpoint')"><i class="fa-solid fa-circle-plus" style="color: white;"></i></button>
+            </td>
+            <td style="padding: 0; text-align: center;">
+              <button id="quitar" onclick="quitarDeLista('Musaka, Ronpoint')"><i class="fa-solid fa-circle-minus" style="color: white;"></i></button>
+            </td>
+          </tr>
+          <!-- Producto -->
+          <tr class="fila-producto">
+            <td class="foto-columna"><img src="https://static.wikia.nocookie.net/supermarket-simulator/images/4/49/Salmon_Nordic_Harbor.png" alt="Salmón Nordic Harbor"></td>
+            <td>Salmón Nordic Harbor</td>
+            <td style="padding: 0; text-align: center;">
+              <button id="agregar" onclick="agregarALista('Salmón, Nordic Harbor')"><i class="fa-solid fa-circle-plus" style="color: white;"></i></button>
+            </td>
+            <td style="padding: 0; text-align: center;">
+              <button id="quitar" onclick="quitarDeLista('Salmón, Nordic Harbor')"><i class="fa-solid fa-circle-minus" style="color: white;"></i></button>
+            </td>
+          </tr>
+          <!-- Producto -->
+          <tr class="fila-producto">
+            <td class="foto-columna"><img src="https://static.wikia.nocookie.net/supermarket-simulator/images/b/b1/Scallop_Gratin_Prypiat.png" alt="Escalope Gratinado Prypiat"></td>
+            <td>Escalope Gratinado Prypiat</td>
+            <td style="padding: 0; text-align: center;">
+              <button id="agregar" onclick="agregarALista('Escalope Gratinado, Prypiat')"><i class="fa-solid fa-circle-plus" style="color: white;"></i></button>
+            </td>
+            <td style="padding: 0; text-align: center;">
+              <button id="quitar" onclick="quitarDeLista('Escalope Gratinado, Prypiat')"><i class="fa-solid fa-circle-minus" style="color: white;"></i></button>
+            </td>
+          </tr>
+          <!-- Producto -->
+          <tr class="fila-producto">
+            <td class="foto-columna"><img src="https://static.wikia.nocookie.net/supermarket-simulator/images/1/13/Steak_Bovora.png" alt="Filete Bovora"></td>
+            <td>Filete Bovora</td>
+            <td style="padding: 0; text-align: center;">
+              <button id="agregar" onclick="agregarALista('Filete, Bovora')"><i class="fa-solid fa-circle-plus" style="color: white;"></i></button>
+            </td>
+            <td style="padding: 0; text-align: center;">
+              <button id="quitar" onclick="quitarDeLista('Filete, Bovora')"><i class="fa-solid fa-circle-minus" style="color: white;"></i></button>
+            </td>
+          </tr>
+          <!-- Producto -->
+          <tr class="fila-producto">
+            <td class="foto-columna"><img src="https://static.wikia.nocookie.net/supermarket-simulator/images/c/cf/Sushi_Large_Ulego.png" alt="Sushi Grande Ulego"></td>
+            <td>Sushi Grande Ulego</td>
+            <td style="padding: 0; text-align: center;">
+              <button id="agregar" onclick="agregarALista('Sushi Grande, Ulego')"><i class="fa-solid fa-circle-plus" style="color: white;"></i></button>
+            </td>
+            <td style="padding: 0; text-align: center;">
+              <button id="quitar" onclick="quitarDeLista('Sushi Grande, Ulego')"><i class="fa-solid fa-circle-minus" style="color: white;"></i></button>
+            </td>
+          </tr>
+          <!-- Producto -->
+          <tr class="fila-producto">
+            <td class="foto-columna"><img src="https://static.wikia.nocookie.net/supermarket-simulator/images/c/c3/Sushi_Small_Ulego.png" alt="Sushi Pequeño Ulego"></td>
+            <td>Sushi Pequeño Ulego</td>
+            <td style="padding: 0; text-align: center;">
+              <button id="agregar" onclick="agregarALista('Sushi Pequeño, Ulego')"><i class="fa-solid fa-circle-plus" style="color: white;"></i></button>
+            </td>
+            <td style="padding: 0; text-align: center;">
+              <button id="quitar" onclick="quitarDeLista('Sushi Pequeño, Ulego')"><i class="fa-solid fa-circle-minus" style="color: white;"></i></button>
+            </td>
+          </tr>
+          <!-- Producto -->
+          <tr class="fila-producto">
+            <td class="foto-columna"><img src="https://static.wikia.nocookie.net/supermarket-simulator/images/9/98/Veal_Chop_Bovora.png" alt="Chuleta de Ternera Bovora"></td>
+            <td>Chuleta de Ternera Bovora</td>
+            <td style="padding: 0; text-align: center;">
+              <button id="agregar" onclick="agregarALista('Chuleta de Ternera, Bovora')"><i class="fa-solid fa-circle-plus" style="color: white;"></i></button>
+            </td>
+            <td style="padding: 0; text-align: center;">
+              <button id="quitar" onclick="quitarDeLista('Chuleta de Ternera, Bovora')"><i class="fa-solid fa-circle-minus" style="color: white;"></i></button>
+            </td>
+          </tr>
+          <!-- Producto -->
+          <tr class="fila-producto">
+            <td class="foto-columna"><img src="https://static.wikia.nocookie.net/supermarket-simulator/images/4/4d/Crab_Stick_Sans.png" alt="Palitos de Cangrejo Sans"></td>
+            <td>Palitos de Cangrejo Sans</td>
+            <td style="padding: 0; text-align: center;">
+              <button id="agregar" onclick="agregarALista('Palitos de Cangrejo, Sans')"><i class="fa-solid fa-circle-plus" style="color: white;"></i></button>
+            </td>
+            <td style="padding: 0; text-align: center;">
+              <button id="quitar" onclick="quitarDeLista('Palitos de Cangrejo, Sans')"><i class="fa-solid fa-circle-minus" style="color: white;"></i></button>
+            </td>
+          </tr>
+          <!-- Producto -->
+          <tr class="fila-producto">
+            <td class="foto-columna"><img src="https://static.wikia.nocookie.net/supermarket-simulator/images/8/80/Hot_Sauce_Hothot.png" alt="Salsa Picante Hothot"></td>
+            <td>Salsa Picante Hothot</td>
+            <td style="padding: 0; text-align: center;">
+              <button id="agregar" onclick="agregarALista('Salsa Picante, Hothot')"><i class="fa-solid fa-circle-plus" style="color: white;"></i></button>
+            </td>
+            <td style="padding: 0; text-align: center;">
+              <button id="quitar" onclick="quitarDeLista('Salsa Picante, Hothot')"><i class="fa-solid fa-circle-minus" style="color: white;"></i></button>
+            </td>
+          </tr>
+          <!-- Producto -->
+          <tr class="fila-producto">
+            <td class="foto-columna"><img src="https://static.wikia.nocookie.net/supermarket-simulator/images/2/29/Ice_cream_Chocolate_Maxi_Cone.png" alt="Helado de Chocolate MaxiCone"></td>
+            <td>Helado de Chocolate MaxiCone</td>
+            <td style="padding: 0; text-align: center;">
+              <button id="agregar" onclick="agregarALista('Helado de Chocolate, MaxiCone')"><i class="fa-solid fa-circle-plus" style="color: white;"></i></button>
+            </td>
+            <td style="padding: 0; text-align: center;">
+              <button id="quitar" onclick="quitarDeLista('Helado de Chocolate, MaxiCone')"><i class="fa-solid fa-circle-minus" style="color: white;"></i></button>
+            </td>
+          </tr>
+          <!-- Producto -->
+          <tr class="fila-producto">
+            <td class="foto-columna"><img src="https://static.wikia.nocookie.net/supermarket-simulator/images/b/b1/Ketchup_Kekette.png" alt="Ketchup Kekette"></td>
+            <td>Ketchup Kekette</td>
+            <td style="padding: 0; text-align: center;">
+              <button id="agregar" onclick="agregarALista('Ketchup, Kekette')"><i class="fa-solid fa-circle-plus" style="color: white;"></i></button>
+            </td>
+            <td style="padding: 0; text-align: center;">
+              <button id="quitar" onclick="quitarDeLista('Ketchup, Kekette')"><i class="fa-solid fa-circle-minus" style="color: white;"></i></button>
+            </td>
+          </tr>
+          <!-- Producto -->
+          <tr class="fila-producto">
+            <td class="foto-columna"><img src="https://static.wikia.nocookie.net/supermarket-simulator/images/1/1d/Mayonnaise_Yoyo.png" alt="Mayonesa Yoyo"></td>
+            <td>Mayonesa Yoyo</td>
+            <td style="padding: 0; text-align: center;">
+              <button id="agregar" onclick="agregarALista('Mayonesa, Yoyo')"><i class="fa-solid fa-circle-plus" style="color: white;"></i></button>
+            </td>
+            <td style="padding: 0; text-align: center;">
+              <button id="quitar" onclick="quitarDeLista('Mayonesa, Yoyo')"><i class="fa-solid fa-circle-minus" style="color: white;"></i></button>
+            </td>
+          </tr>
+          <!-- Producto -->
+          <tr class="fila-producto">
+            <td class="foto-columna"><img src="https://static.wikia.nocookie.net/supermarket-simulator/images/3/3e/Pizza_Cheddar_ChezzyPizz.png" alt="Pizza Cheddar CheezyPizz"></td>
+            <td>Pizza Cheddar CheezyPizz</td>
+            <td style="padding: 0; text-align: center;">
+              <button id="agregar" onclick="agregarALista('Pizza Cheddar, CheezyPizz')"><i class="fa-solid fa-circle-plus" style="color: white;"></i></button>
+            </td>
+            <td style="padding: 0; text-align: center;">
+              <button id="quitar" onclick="quitarDeLista('Pizza Cheddar, CheezyPizz')"><i class="fa-solid fa-circle-minus" style="color: white;"></i></button>
+            </td>
+          </tr>
+                 
+        </tbody>  
       </table>
     </div>
   </div>
