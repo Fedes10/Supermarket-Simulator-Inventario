@@ -39,7 +39,7 @@
 
 ## Fotos
 
-<img src="https://github.com/Fedes10/Mi-propia-IA/blob/Inicio/Foto-Web-Ejemplo.png" width="780" height="500">
+<img src="https://github.com/Fedes10/Mi-propia-IA/blob/Inicio/Captura%20de%20pantalla%202024-06-24%20172240.png" width="780" height="500">
 
 ---
 
